@@ -1,11 +1,7 @@
 package com.martahrefs.nutrition.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,23 +13,27 @@ import com.martahrefs.nutrition.R;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    CardView foodCard;
-
-
-    private FactBook mFactbook;
+    private FactBook mFactbook = new FactBook();
     private CardView mFoodCard;
+    private CardView mGetHelpCard;
+    private CardView mForumCard;
     private CardView mDiseaseCard;
     private Button mRefreshButton;
-    
+    private String mFact;
+    private TextView mFunTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Initialize the views
         mFoodCard = findViewById(R.id.foodCard);
         mDiseaseCard = findViewById(R.id.diseaseCard);
         mRefreshButton = findViewById(R.id.refreshButton);
+        mForumCard = findViewById(R.id.forumCard);
+        mGetHelpCard = findViewById(R.id.getHelpCard);
+
 
         // Get a random fact and update textView
         mFact = mFactbook.getRandomFact();
@@ -60,16 +60,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,DiseaseListActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-        foodCard=(CardView)findViewById(R.id.foodCard);
-        foodCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), FoodListActivity.class);
                 startActivity(intent);
             }
         });
