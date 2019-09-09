@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="15dp"
+    android:orientation="horizontal"
+    android:clickable="true">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/foodListItemImage"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_weight="15"
+        android:src="@drawable/doctor"
+        app:civ_shadow="false"
+        app:civ_border="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="85"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/foodListItemTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Dandelion"
+            android:textStyle="bold"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/foodListItemTypeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="6dp"
+            android:text="Flower"
+            android:ellipsize="end"/>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/cardview_shadow_start_color"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

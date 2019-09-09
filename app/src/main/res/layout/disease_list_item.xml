@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="70dp"
+    android:orientation="horizontal"
+    android:clickable="true">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/diseaseListItemImage"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_weight="15"
+        android:src="@drawable/heart"
+        app:civ_shadow="false"
+        app:civ_border="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="85"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/diseaseListItemTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginBottom="15dp"
+            android:text="Anaemia"
+            android:textStyle="bold"
+            android:ellipsize="end"/>
+
+            <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+                android:layout_gravity="bottom"
+            android:background="@color/cardview_shadow_start_color"/>
+
+    </LinearLayout>
+
+</LinearLayout>
