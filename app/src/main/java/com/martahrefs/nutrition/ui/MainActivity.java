@@ -10,34 +10,37 @@ import butterknife.OnClick;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.martahrefs.nutrition.R;
 
 public class MainActivity extends AppCompatActivity {
-
-
-    public static final int FOOD_FLAG = 1;
-    public static final int DISEASE_FLAG = 2;
-    public static final int PRODUCTS_FLAG = 3;
-    public static final int GET_HELP_FLAG = 4;
+    private FactBook mFactbook;
+    private String mFact = mFactbook.getRandomFact();
+    @BindView(R.id.factTextView) TextView mFunTextView;
 
     //Onclick listeners with ButterKnife annotation
-    /*@OnClick(R.id.foodCard) void startFoodList(){
-        Intent intent = new Intent();
-        intent.putExtra(getString(R.string.key_passed),FOOD_FLAG);
+    @OnClick(R.id.foodCard) void startFoodList(){
+        Intent intent = new Intent(this,FoodListActivity.class);
         startActivity(intent);
-    }*/
+    }
 
     @OnClick(R.id.diseaseCard) void startDiseaseList(){
-        Intent intent = new Intent();
-        intent.putExtra(getString(R.string.key_passed),DISEASE_FLAG);
-        startActivity(intent);
+        Intent intent = new Intent(this,DiseaseListActivity.class);
+
+    }
+
+    @OnClick(R.id.refreshButton) void nextFact(){
+        mFact = mFactbook.getRandomFact();
+        mFunTextView.setText(mFact);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mFact = mFactbook.getRandomFact();
 
         /* Bind view with ButterKnife */
         ButterKnife.bind(this);
