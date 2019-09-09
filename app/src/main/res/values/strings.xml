@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Nutritech</string>
+    <string name="app_name">NutriTech</string>
     <string name="next_fun_fact">NEXT FUN FACT</string>
     <string name="kindness">You have more kindness in your little finger than most people have in their entire bodies</string>
     <string name="key_passed">keyPassed</string>
@@ -13,4 +13,19 @@
     <string name="type3Diabetes">Gestational Diabetes\nIts is a type of diabetes that occurs to women during pregnancy due to production of insulin blocking hormones produced by the placenta. It can clear off after delivery or if not well managed, might culminate into diabetes mellitus. If unmanaged can lead to pre–eclempsia/eclempsia.\n\nHBA1C gauges the average blood sugar level over 2–3 months and measures the amount of sugar attached to protein haemoglobin attached to red blood cells. 4.5–5.6 percent is for non–diabetc. 5.7-6.4 percent is for pre-diabetics whereas greater than 6.5 percent is a indicates a case of diabetes.</string>
     <string name="shortDescrip">Diabetes is a Health Condition Characterized by too high or too low blood sugar levels. There are basically five sub-groups of diabetes.</string>
 
+    <string name="white_rice">According to the new study, diabetes risk rises by about 10% with each increased serving per day of white rice. White rice ranks high on the glycemic index, which means it can cause a sudden spike in blood sugar levels. White rice is also low in fiber that can help lower the risk for developing diabetes.</string>
+
+    <string name="white_bread">Eating lots of high-GI foods like white breads and white potatoes can cause weight gain, raising the risk of diabetes, say the researchers. A high-GI diet could also lead to insulin resistance (decreased ability for the body to respond to the hormone insulin), which can lead to diabetes.</string>
+
+    <string name="french_fries">French fries are a food to steer clear of, especially if you have diabetes. Potatoes themselves are relatively high in carbs. ... Deep-frying foods has been shown to produce high amounts of toxic compounds like AGEs and aldehydes, which may promote inflammation and increase the risk of disease </string>
+
+    <string name="grapes">They contain a resveratol which is found in grapes, that regulates the blood glucose response by afffecting how the body secrees and uses insulin</string>
+    
+    <string name="apples">Diabetetics should feel free to consume apples since they contain less sugar hence reducing the risk of type 2 diabetes.</string>
+    
+    <string name="watermelons">They are rich in potassium content which makes them one of the best fruits for proper kidney functioning which in turn keeps blood uric acid levels on the lower side. This prevets didney damage especially if one is diabetic.</string>
+
+    <string name="papaya">Natual antioxidans within the fruit makes a papaya a great choice for diabetic. diabetics are prone to many ailments including heart or mere damage caused by irregular blood sugar levels.</string>
+
+    <string name="oranges">They contain organic acids such as citric acids which slows glucose uptake and inhibits the movement of transport of glucose throught the intestines and liver. Fruits are very essential to the body s they are able to keep he body toxic-free hence contribute to detoxification effect.</string>
 </resources>

@@ -16,4 +16,10 @@
 
     <style name="NoToolBar" parent="Theme.AppCompat.Light.NoActionBar"/>
 
+    <style name="FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+
+    </style>
+
 </resources>
