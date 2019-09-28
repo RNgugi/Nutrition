@@ -20,31 +20,50 @@ public class MainActivity extends AppCompatActivity {
 
     CardView foodCard;
 
+    private CardView mFoodCard;
+    private CardView mDiseaseCard;
+    private Button mRefreshButton;
+
 
     private FactBook mFactbook;
-    private String mFact;
-    @BindView(R.id.factTextView) TextView mFunTextView;
 
-    //Onclick listeners with ButterKnife annotation
-    @OnClick(R.id.foodCard) void startFoodList(){
-        Intent intent = new Intent(this,FoodListActivity.class);
-        startActivity(intent);
-    }
 
-    @OnClick(R.id.diseaseCard) void startDiseaseList(){
-        Intent intent = new Intent(this,DiseaseListActivity.class);
 
-    }
-
-    @OnClick(R.id.refreshButton) void nextFact(){
-        mFact = mFactbook.getRandomFact();
-        mFunTextView.setText(mFact);
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        mFoodCard = findViewById(R.id.foodCard);
+        mDiseaseCard = findViewById(R.id.diseaseCard);
+        mRefreshButton = findViewById(R.id.refreshButton);
+
+
+
+        mRefreshButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
+
+        mFoodCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,FoodListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mDiseaseCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,DiseaseListActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
          //mFact = mFactbook.getRandomFact();
 
@@ -56,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         //mFact = mFactbook.getRandomFact();
 
 
@@ -71,4 +91,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(getString(R.string.key_passed),FOOD_FLAG);
         startActivity(intent);
     }*/
+
+    }
+
 }
