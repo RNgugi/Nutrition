@@ -7,6 +7,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,14 +30,28 @@ public class FoodListActivity extends AppCompatActivity {
     }
 
     private void cardsMethod() {
+
+        // custom dialog
+        final Dialog dialog = new Dialog(context);
+        dialog.setContentView(R.layout.custom_dialogbox);
+        dialog.setTitle("Title...");
+
+        // if button is clicked, close the custom dialog
+        Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+        dialogButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+
+        //CardView 1
         cardView1=(CardView)findViewById(R.id.cardView1);
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // custom dialog
-                final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.custom_dialogbox);
-                dialog.setTitle("Title...");
+
 
                 // set the custom dialog components - text, image and button
                 TextView text = (TextView) dialog.findViewById(R.id.text);
@@ -47,114 +62,99 @@ public class FoodListActivity extends AppCompatActivity {
             }
         });
 
+
+        //CardView 2
         cardView2=(CardView)findViewById(R.id.cardView2);
         cardView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // custom dialog
-                final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.custom_dialogbox);
-                dialog.setTitle("Title...");
 
                 // set the custom dialog components - text, image and button
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText("Clicked cardview 1");
+                text.setText("");
                 ImageView image = (ImageView) dialog.findViewById(R.id.image);
-                image.setImageResource(R.drawable.ic_oatmeal);
+                image.setImageResource(R.drawable.brown_rice);
                 dialog.show();
             }
         });
 
+
+        //CardView 3
         cardView3=(CardView)findViewById(R.id.cardView3);
         cardView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // custom dialog
-                final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.custom_dialogbox);
-                dialog.setTitle("Title...");
-
                 // set the custom dialog components - text, image and button
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText("Clicked cardview 1");
+                text.setText("");
                 ImageView image = (ImageView) dialog.findViewById(R.id.image);
-                image.setImageResource(R.drawable.ic_oatmeal);
+                image.setImageResource(R.drawable.kales);
                 dialog.show();
             }
         });
 
+
+        //CardView 4
         cardView4=(CardView)findViewById(R.id.cardView4);
         cardView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // custom dialog
-                final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.custom_dialogbox);
-                dialog.setTitle("Title...");
-
                 // set the custom dialog components - text, image and button
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText("Clicked cardview 1");
+                text.setText(R.string.millet);
                 ImageView image = (ImageView) dialog.findViewById(R.id.image);
-                image.setImageResource(R.drawable.ic_oatmeal);
+                image.setImageResource(R.drawable.millet);
                 dialog.show();
             }
         });
 
+
+        //CardView 5
         cardView5=(CardView)findViewById(R.id.cardView5);
         cardView5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // custom dialog
-                final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.custom_dialogbox);
-                dialog.setTitle("Title...");
-
                 // set the custom dialog components - text, image and button
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText("Clicked cardview 1");
+                text.setText(R.string.french_fries);
                 ImageView image = (ImageView) dialog.findViewById(R.id.image);
-                image.setImageResource(R.drawable.ic_oatmeal);
+                image.setImageResource(R.drawable.spinach);
                 dialog.show();
             }
         });
 
+
+        //CardView 6
         cardView6=(CardView)findViewById(R.id.cardView6);
         cardView6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // custom dialog
-                final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.custom_dialogbox);
-                dialog.setTitle("Title...");
-
                 // set the custom dialog components - text, image and button
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText("Clicked cardview 1");
+                text.setText(R.string.french_fries);
                 ImageView image = (ImageView) dialog.findViewById(R.id.image);
-                image.setImageResource(R.drawable.ic_oatmeal);
+                image.setImageResource(R.drawable.white_rice_holder);
                 dialog.show();
             }
         });
 
+
+        //CardView 7
         cardView7=(CardView)findViewById(R.id.cardView7);
         cardView7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // custom dialog
-                final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.custom_dialogbox);
-                dialog.setTitle("Title...");
-
                 // set the custom dialog components - text, image and button
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText("Clicked cardview 1");
+                text.setText(R.string.white_bread);
                 ImageView image = (ImageView) dialog.findViewById(R.id.image);
-                image.setImageResource(R.drawable.ic_oatmeal);
+                image.setImageResource(R.drawable.white_bread);
                 dialog.show();
             }
         });
 
+
+        //CardView 8
         cardView8=(CardView)findViewById(R.id.cardView8);
         cardView8.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -162,26 +162,23 @@ public class FoodListActivity extends AppCompatActivity {
                 // custom dialog
                 final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.custom_dialogbox);
-                dialog.setTitle("Title...");
+                dialog.setTitle("French Fries");
 
                 // set the custom dialog components - text, image and button
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText("Clicked cardview 1");
+                text.setText(R.string.french_fries);
                 ImageView image = (ImageView) dialog.findViewById(R.id.image);
-                image.setImageResource(R.drawable.ic_oatmeal);
+                image.setImageResource(R.drawable.french_fries);
                 dialog.show();
             }
         });
 
+
+        //CardView 9
         cardView9=(CardView)findViewById(R.id.cardView9);
         cardView9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // custom dialog
-                final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.custom_dialogbox);
-                dialog.setTitle("Title...");
-
                 // set the custom dialog components - text, image and button
                 TextView text = (TextView) dialog.findViewById(R.id.text);
                 text.setText(R.string.oatmeal);
@@ -191,15 +188,12 @@ public class FoodListActivity extends AppCompatActivity {
             }
         });
 
+
+        //CardView 10
         cardView10=(CardView)findViewById(R.id.cardView10);
         cardView10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // custom dialog
-                final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.custom_dialogbox);
-                dialog.setTitle("Title...");
-
                 // set the custom dialog components - text, image and button
                 TextView text = (TextView) dialog.findViewById(R.id.text);
                 text.setText("Clicked cardview 1");
