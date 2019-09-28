@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private FactBook mFactbook;
-    private String mFact = mFactbook.getRandomFact();
+    private String mFact;
     @BindView(R.id.factTextView) TextView mFunTextView;
 
     //Onclick listeners with ButterKnife annotation
@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+         //mFact = mFactbook.getRandomFact();
+
         foodCard=(CardView)findViewById(R.id.foodCard);
         foodCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,14 +56,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mFact = mFactbook.getRandomFact();
+        //mFact = mFactbook.getRandomFact();
 
 
         /* Bind view with ButterKnife */
         ButterKnife.bind(this);
 
     }
-    
+
 
     //Onclick listeners with ButterKnife annotation
     /*@OnClick(R.id.foodCard) void startFoodList(){

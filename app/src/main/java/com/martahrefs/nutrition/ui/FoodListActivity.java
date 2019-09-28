@@ -19,6 +19,7 @@ public class FoodListActivity extends AppCompatActivity {
     final Context context = this;
 
     CardView cardView1, cardView2, cardView3, cardView4, cardView5, cardView6, cardView7, cardView8, cardView9, cardView10;
+    CardView cardView11, cardView12, cardView13, cardView14, cardView15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,7 +117,7 @@ public class FoodListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // set the custom dialog components - text, image and button
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText(R.string.french_fries);
+                text.setText(R.string.spinach);
                 ImageView image = (ImageView) dialog.findViewById(R.id.image);
                 image.setImageResource(R.drawable.spinach);
                 dialog.show();
@@ -131,9 +132,9 @@ public class FoodListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // set the custom dialog components - text, image and button
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText(R.string.french_fries);
+                text.setText(R.string.grapes);
                 ImageView image = (ImageView) dialog.findViewById(R.id.image);
-                image.setImageResource(R.drawable.white_rice_holder);
+                image.setImageResource(R.drawable.grapes);
                 dialog.show();
             }
         });
@@ -146,9 +147,9 @@ public class FoodListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // set the custom dialog components - text, image and button
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText(R.string.white_bread);
+                text.setText(R.string.apples);
                 ImageView image = (ImageView) dialog.findViewById(R.id.image);
-                image.setImageResource(R.drawable.white_bread);
+                image.setImageResource(R.drawable.apple);
                 dialog.show();
             }
         });
@@ -166,9 +167,9 @@ public class FoodListActivity extends AppCompatActivity {
 
                 // set the custom dialog components - text, image and button
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText(R.string.french_fries);
+                text.setText(R.string.watermelons);
                 ImageView image = (ImageView) dialog.findViewById(R.id.image);
-                image.setImageResource(R.drawable.french_fries);
+                image.setImageResource(R.drawable.watermelon);
                 dialog.show();
             }
         });
@@ -181,7 +182,82 @@ public class FoodListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // set the custom dialog components - text, image and button
                 TextView text = (TextView) dialog.findViewById(R.id.text);
-                text.setText(R.string.oatmeal);
+                text.setText(R.string.papaya);
+                ImageView image = (ImageView) dialog.findViewById(R.id.image);
+                image.setImageResource(R.drawable.papaya);
+                dialog.show();
+            }
+        });
+
+
+        //CardView 10
+        cardView10=(CardView)findViewById(R.id.cardView10);
+        cardView10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // set the custom dialog components - text, image and button
+                TextView text = (TextView) dialog.findViewById(R.id.text);
+                text.setText(R.string.oranges);
+                ImageView image = (ImageView) dialog.findViewById(R.id.image);
+                image.setImageResource(R.drawable.orange_holder);
+                dialog.show();
+            }
+        });
+
+
+        //CardView 11
+        cardView11=(CardView)findViewById(R.id.cardView10);
+        cardView11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // set the custom dialog components - text, image and button
+                TextView text = (TextView) dialog.findViewById(R.id.text);
+                text.setText(R.string.white_rice);
+                ImageView image = (ImageView) dialog.findViewById(R.id.image);
+                image.setImageResource(R.drawable.white_rice_holder);
+                dialog.show();
+            }
+        });
+
+
+        //CardView 12
+        cardView12=(CardView)findViewById(R.id.cardView10);
+        cardView12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // set the custom dialog components - text, image and button
+                TextView text = (TextView) dialog.findViewById(R.id.text);
+                text.setText(R.string.white_bread);
+                ImageView image = (ImageView) dialog.findViewById(R.id.image);
+                image.setImageResource(R.drawable.white_bread);
+                dialog.show();
+            }
+        });
+
+
+        //CardView 13
+        cardView10=(CardView)findViewById(R.id.cardView10);
+        cardView10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // set the custom dialog components - text, image and button
+                TextView text = (TextView) dialog.findViewById(R.id.text);
+                text.setText(R.string.french_fries);
+                ImageView image = (ImageView) dialog.findViewById(R.id.image);
+                image.setImageResource(R.drawable.french_fries);
+                dialog.show();
+            }
+        });
+
+
+        //CardView 14
+        cardView10=(CardView)findViewById(R.id.cardView10);
+        cardView10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // set the custom dialog components - text, image and button
+                TextView text = (TextView) dialog.findViewById(R.id.text);
+                text.setText("Clicked cardview 1");
                 ImageView image = (ImageView) dialog.findViewById(R.id.image);
                 image.setImageResource(R.drawable.ic_oatmeal);
                 dialog.show();
@@ -189,7 +265,7 @@ public class FoodListActivity extends AppCompatActivity {
         });
 
 
-        //CardView 10
+        //CardView 15
         cardView10=(CardView)findViewById(R.id.cardView10);
         cardView10.setOnClickListener(new View.OnClickListener() {
             @Override
