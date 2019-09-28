@@ -10,16 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.DiseaseListActivity"></activity>
-        <activity android:name=".ui.FoodListActivity" />
+        <activity android:name=".ui.FoodListActivity" >
+        </activity>
         <activity
             android:name=".ui.MainActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

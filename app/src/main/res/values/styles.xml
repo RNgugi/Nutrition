@@ -14,4 +14,6 @@
 	    <item name="android:textStyle">italic</item>
 	</style>
 
+    <style name="NoToolBar" parent="Theme.AppCompat.Light.NoActionBar"/>
+
 </resources>
