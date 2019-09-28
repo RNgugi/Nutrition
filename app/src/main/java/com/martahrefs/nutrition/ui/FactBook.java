@@ -18,7 +18,7 @@ public class FactBook {
 
     public String getRandomFact(){
         Random random = new Random();
-        int randomNumber = random.nextInt(facts.length+1);
+        int randomNumber = random.nextInt(facts.length);
         String fact = facts[randomNumber];
         return fact;
     }
