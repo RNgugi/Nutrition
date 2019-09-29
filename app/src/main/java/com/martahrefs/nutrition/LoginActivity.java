@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        title2 = (TextView) findViewById(R.id.login_title);
+        title2 = (TextView) findViewById(R.id.registration_title);
         tp2 = Typeface.createFromAsset(getAssets(), "fonts/QuickKiss.ttf");
         title2.setTypeface(tp2);
 

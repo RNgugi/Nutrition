@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Get a random fact and update textView
         mFact = mFactbook.getRandomFact();
+        mFunTextView=(TextView)findViewById(R.id.factTextView);
         mFunTextView.setText(mFact);
 
 

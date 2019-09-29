@@ -28,7 +28,7 @@ public class RegistrationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
-        title3=(TextView)findViewById(R.id.login_title);
+        title3=(TextView)findViewById(R.id.registration_title);
         tp3= Typeface.createFromAsset(getAssets(), "fonts/QuickKiss.ttf");
         title3.setTypeface(tp3);
 
