@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Splash"
+        <activity android:name=".ui.ChatActivity"></activity>
+        <activity android:name=".ui.ProductsActivity" />
+        <activity android:name=".ui.DoctorActivity" />
+        <activity
+            android:name=".Splash"
             android:theme="@style/NoToolBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,24 +21,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".LoginActivity"
-            android:theme="@style/NoToolBar"/>
-
-        <activity android:name=".ProfileActivity"
-            android:theme="@style/NoToolBar"/>
-
-        <activity android:name=".RegistrationActivity"
-            android:theme="@style/NoToolBar"/>
-
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/NoToolBar" />
+        <activity
+            android:name=".ProfileActivity"
+            android:theme="@style/NoToolBar" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:theme="@style/NoToolBar" />
         <activity android:name=".ui.DiseaseListActivity" />
-
-        <activity android:name=".ui.FoodListActivity"/>
-
+        <activity android:name=".ui.FoodListActivity" />
         <activity
             android:name=".ui.MainActivity"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

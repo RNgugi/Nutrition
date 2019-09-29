@@ -2,6 +2,7 @@ package com.martahrefs.nutrition.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import butterknife.BindView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +12,7 @@ import android.widget.TextView;
 
 import com.martahrefs.nutrition.R;
 
-public class MainActivity extends AppCompatActivity {
+public class DoctorActivity extends AppCompatActivity {
 
     private FactBook mFactbook = new FactBook();
     private CardView mFoodCard;
@@ -25,21 +26,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_doctor);
 
         // Initialize the views
-        mFoodCard = findViewById(R.id.foodCard);
-        mDiseaseCard = findViewById(R.id.diseaseCard);
-        mRefreshButton = findViewById(R.id.refreshButton);
-        mForumCard = findViewById(R.id.forumCard);
-        mGetHelpCard = findViewById(R.id.getHelpCard);
-        mFunTextView = findViewById(R.id.factTextView);
-
+        mFoodCard = findViewById(R.id.foodCardDoc);
+        mDiseaseCard = findViewById(R.id.diseaseCardDoc);
+        mRefreshButton = findViewById(R.id.refreshButtonDoc);
+        mForumCard = findViewById(R.id.forumCardDoc);
+        mFunTextView = findViewById(R.id.factTextViewDoc);
 
         // Get a random fact and update textView
         mFact = mFactbook.getRandomFact();
         mFunTextView.setText(mFact);
-
 
         mRefreshButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         mFoodCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,FoodListActivity.class);
+                Intent intent = new Intent(DoctorActivity.this,FoodListActivity.class);
                 startActivity(intent);
             }
         });
@@ -60,23 +58,7 @@ public class MainActivity extends AppCompatActivity {
         mDiseaseCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,DiseaseListActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        mGetHelpCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,ChatActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        mGetHelpCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,ProductsActivity.class);
+                Intent intent = new Intent(DoctorActivity.this,DiseaseListActivity.class);
                 startActivity(intent);
             }
         });
